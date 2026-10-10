@@ -1,0 +1,289 @@
+
+/* 1. Basic settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f4;
+    color: #263329;
+    line-height: 1.6;
+}
+
+/* 2. Website header */
+header {
+    background-color: #123d2a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #dde8e1;
+    font-size: 16px;
+}
+
+/* 3. Main content */
+main {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 25px;
+}
+
+h2 {
+    color: #17613b;
+    margin-bottom: 12px;
+    margin-top: 25px;
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+/* 4. Product list */
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+li {
+    background-color: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #e1e8e1;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+/* 5. Hover effect */
+li:hover {
+    transform: translateY(-5px);
+}
+
+/* 6. Mobile-friendly design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 18px;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Navigation */
+header nav {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #bde5c8;
+}
+
+/* Welcome section */
+.hero {
+    background: linear-gradient(135deg, #e6f0e8, #f8faf7);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.hero h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    max-width: 750px;
+    margin: 12px auto;
+    color: #123d2a;
+}
+
+.hero > p:not(.eyebrow) {
+    max-width: 620px;
+    margin: 0 auto 25px;
+}
+
+.eyebrow {
+    color: #438158;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    background: #17613b;
+    color: white;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #0d4529;
+}
+
+/* Section layouts */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.section > h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.section-intro {
+    color: #5e6c61;
+    margin-bottom: 28px;
+}
+
+/* Product cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.product-card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e1e8e1;
+    box-shadow: 0 5px 20px rgba(18, 61, 42, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(18, 61, 42, 0.12);
+}
+
+.product-icon {
+    font-size: 38px;
+}
+
+.product-card h3 {
+    color: #17613b;
+    margin: 12px 0;
+}
+
+.product-card p {
+    color: #5e6c61;
+    margin-bottom: 18px;
+}
+
+.product-card a {
+    color: #17613b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* About section */
+.about {
+    max-width: none;
+    background: #eaf2eb;
+    padding-left: max(25px, calc((100% - 1050px) / 2));
+    padding-right: max(25px, calc((100% - 1050px) / 2));
+}
+
+.about p:not(.eyebrow) {
+    max-width: 800px;
+    margin-top: 12px;
+}
+
+/* Contact section */
+.contact {
+    text-align: center;
+}
+
+.contact-details {
+    margin: 25px auto;
+    max-width: 600px;
+    padding: 22px;
+    background: white;
+    border: 1px solid #e1e8e1;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.whatsapp {
+    background: #187747;
+}
+
+.whatsapp:hover {
+    background: #105c35;
+}
+
+/* Footer */
+footer {
+    background: #123d2a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+footer p + p {
+    color: #d8e8dc;
+    margin-top: 5px;
+}
+
+/* Mobile screens */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header nav {
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .section {
+        padding: 45px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
